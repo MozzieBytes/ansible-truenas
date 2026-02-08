@@ -735,7 +735,7 @@ def main():
                 arg['uid'] = uid
 
             # Compare the given password to the existing hash.
-            if password is not None and user_info['unixhash'] != password:
+            if password and user_info['unixhash'] != password:
                 arg['password'] = password
 
             if password_disabled is not None and \
